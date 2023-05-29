@@ -7,7 +7,7 @@ use typedef::{Precision, TypePrecision};
 use std::time::Instant;
 use lapack::{dspevd, sspevd, zhpevd, chpevd};
 
-pub const N_SITE: u32 = 5;
+pub const N_SITE: u32 = 2;
 pub static CONS_T: Precision = Precision(1.0);
 pub static CONS_U: Precision = Precision(1.0);
 
