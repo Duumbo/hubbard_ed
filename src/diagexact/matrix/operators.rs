@@ -1,12 +1,12 @@
 // Operator.rs
 // Defines number operators and hoping operators.
 
-use crate::typedef::{Precision, Cluster};
+use crate::typedef::{Precision, Cluster, TypePrecision};
 use crate::{N_SITE, CONS_U};
 
 #[inline(always)]
 pub fn terme_pot(n: Cluster) -> Precision {
-    Precision::from(((n << N_SITE) & n).count_ones() as f64) * CONS_U
+    Precision::from(((n << N_SITE) & n).count_ones() as TypePrecision) * CONS_U
 }
 
 fn c_dag_c(n: Cluster, mask: Cluster) -> Cluster {

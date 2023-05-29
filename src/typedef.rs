@@ -14,13 +14,13 @@ type TypeDeSite = u128;
 pub type TypePrecision = f64;
 #[cfg(feature = "coefs_real")]
 #[cfg(feature = "single_precision")]
-type TypePrécision = f32;
+pub type TypePrecision = f32;
 #[cfg(feature = "double_precision")]
 #[cfg(feature = "coefs_complex")]
-type TypePrécision = Complex<f64>;
+pub type TypePrecision = Complex<f64>;
 #[cfg(feature = "coefs_complex")]
 #[cfg(feature = "single_precision")]
-type TypePrécision = Complex<f32>;
+pub type TypePrecision = Complex<f32>;
 
 #[derive(Debug, Copy, Clone, PartialEq, From, Add, Mul, Into)]
 #[mul(forward)]
